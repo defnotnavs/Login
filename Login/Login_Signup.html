@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated gradient background -->
+    <div class="background-gradient">
+      <div class="gradient-overlay"></div>
+    </div>
+    <div class="container">
+        <!-- Card-style container with shadow -->
+        <div class="main-card">
+        <!-- Simple tab switcher for login/signup -->
+        <!-- Enhanced toggle buttons with border radius -->
+        <div class="toggle-container">
+            <button class="toggle-btn active" id="login-toggle">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+            <button class="toggle-btn" id="signup-toggle">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </button>
+        </div>
+
+        <div class="form-container card" id="login-form">
+            <!-- Decorative wave element -->
+            <div class="wave"></div>
+            <!-- Logo with animation -->
+            <div class="logo">
+              <div class="logo-circle pulse"></div>
+              <img src="img/logo.png" alt="App Logo" class="logo-img">
+              <div class="logo-shine"></div>
+            </div>
+            <h2>Welcome to Our Site</h2>
+            <p class="subtitle">Please enter your details</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <div class="input-wrapper floating-label">
+                        <input type="email" id="login-email" placeholder=" " required>
+                        <label class="floating-label-text">Email</label>
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        <div class="input-highlight"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="login-password" placeholder=" " required>
+                        <label>Password</label>
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn ripple">
+                    Sign In
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                    <span class="ripple-effect"></span>
+                </button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <!-- Basic social login options -->
+                <div class="social-login">
+                    <p>Or login with:</p>
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button type="button" class="social-btn">
+                        Facebook
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container" id="signup-form" style="display: none;">
+            <div class="logo">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3809f619-cb9e-49f6-bf1d-8f959ab90de6.png" alt="Company logo showing a shield with secure lock icon in blue and white colors">
+            </div>
+            <h2>Sign Up</h2>
+            <p class="subtitle">Join our community</p>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="signup-name" placeholder=" " required>
+                        <label>Full Name</label>
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="signup-email" placeholder=" " required>
+                        <label>Email</label>
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="signup-password" placeholder=" " required>
+                        <label>Password</label>
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="signup-confirm-password" placeholder=" " required>
+                        <label>Confirm Password</label>
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                    </div>
+                </div>
+                <!-- Basic terms agreement -->
+                <div class="form-group terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms</label>
+                    <p class="small-text">By signing up, you agree to our <a href="#">Terms</a>.</p>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Create Account
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        Continue with Facebook
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
