@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   // Toggle between login and signup forms
   const loginToggle = document.getElementById('login-toggle');
@@ -8,45 +5,57 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginForm = document.getElementById('login-form');
   const signupForm = document.getElementById('signup-form');
 
-  loginToggle.addEventListener('click', function() {
-    loginForm.style.display = 'block';
-    signupForm.style.display = 'none';
-    loginToggle.classList.add('active');
-    signupToggle.classList.remove('active');
-  });
+  // Make sure login and signup forms are available in the DOM
+  if (loginForm && signupForm) {
+    // Event Listener for Login Toggle
+    loginToggle.addEventListener('click', function() {
+      loginForm.style.display = 'block';
+      signupForm.style.display = 'none';
+      loginToggle.classList.add('active');
+      signupToggle.classList.remove('active');
+    });
 
-  signupToggle.addEventListener('click', function() {
-    loginForm.style.display = 'none';
-    signupForm.style.display = 'block';
-    signupToggle.classList.add('active');
-    loginToggle.classList.remove('active');
-  });
+    // Event Listener for Signup Toggle
+    signupToggle.addEventListener('click', function() {
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+      signupToggle.classList.add('active');
+      loginToggle.classList.remove('active');
+    });
+  }
 
   // Form submission handlers
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-    
-    // Add your login logic here
-    console.log('Login attempt:', email);
-    alert('Login functionality would be implemented here');
-  });
+  const loginFormElement = document.getElementById('login-form');
+  const signupFormElement = document.getElementById('signup-form');
 
-  document.getElementById('signupForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const password = document.getElementById('signup-password').value;
-    const confirmPassword = document.getElementById('signup-confirm-password').value;
-    
-    if (password !== confirmPassword) {
-      alert('Passwords do not match!');
-      return;
-    }
-    
-    // Add your signup logic here
-    console.log('Signup attempt');
-    alert('Signup functionality would be implemented here');
-  });
+  if (loginFormElement) {
+    loginFormElement.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      
+      // Add your login logic here
+      console.log('Login attempt:', email);
+      alert('Login functionality would be implemented here');
+    });
+  }
+
+  if (signupFormElement) {
+    signupFormElement.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-confirm-password').value;
+      
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      // Add your signup logic here
+      console.log('Signup attempt');
+      alert('Signup functionality would be implemented here');
+    });
+  }
 
   // Add ripple effect to buttons
   document.querySelectorAll('.ripple').forEach(button => {
