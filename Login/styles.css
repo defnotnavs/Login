@@ -149,10 +149,20 @@ input:focus {
     }
 
     .form-group {
-        margin-bottom: 10px; /* Further reduce bottom margin */
+        margin-bottom: 20px; /* Further reduce bottom margin */
     }
 
     input {
         padding: 10px; /* Adjusted input padding */
     }
+}
+
+.terms {
+    display: flex;
+    align-items: left; /* Align vertically */
+    margin-left: -300px; /* Space between checkbox and text */
+}
+
+.terms input {
+    margin-right: -300px; /* Space between checkbox and text */
 }
