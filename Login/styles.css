@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: space-around; /* Improved spacing */
     margin-bottom: 15px; 
-}
+}        
 
 /* Toggle button styles */
 .toggle-btn {
