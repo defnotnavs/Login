@@ -159,7 +159,7 @@ input:focus {
 
 .terms {
     display: flex;
-    align-items: left; /* Align vertically */
+    align-items: center; /* Align vertically */
     margin-left: -300px; /* Space between checkbox and text */
 }
 
